@@ -7,8 +7,6 @@ ENV ANDROID_HOME="/opt/android-sdk"
 
 ENV PATH="${ANDROID_HOME}/tools/bin:$PATH"
 
-WORKDIR /
-
 RUN curl -s -O https://dl.google.com/android/repository/sdk-tools-linux-${ANDROID_VERSION_SDK_TOOLS}.zip \
     && mkdir ${ANDROID_HOME} \
     && unzip sdk-tools-linux-${ANDROID_VERSION_SDK_TOOLS}.zip -d ${ANDROID_HOME} \

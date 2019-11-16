@@ -6,8 +6,6 @@ ENV FLUTTER_HOME="/opt/flutter"
 
 ENV PATH="${FLUTTER_HOME}/bin:${FLUTTER_HOME}/bin/cache/dart-sdk/bin:$PATH"
 
-WORKDIR /
-
 RUN curl https://storage.googleapis.com/flutter_infra/releases/stable/linux/flutter_linux_${FLUTTER_VERSION}-${FLUTTER_CHANNEL}.tar.xz -o /opt/flutter.tar.xz \
     && tar xf /opt/flutter.tar.xz -C /opt \
     && rm /opt/flutter.tar.xz \
